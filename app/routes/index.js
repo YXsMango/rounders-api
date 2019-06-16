@@ -1,22 +1,14 @@
 let express = require('express');
 
-let exampleRoutes = require('../controllers/example');
+let controllers = require('../controllers');
 
 let router = express.Router();
 
 
 /***
  * GET /
- * @returns: {HTML} renders welcome page
+ * @returns: {JSON} sends a hello message
  */
-router.get('/', function(req, res) {
-    res.render('index', { title: 'Express' });
-});
-
-/***
- * GET /hello
- * @type {Router}
- */
-router.get('/hello', exampleRoutes.hello);
+router.get('/', controllers.hello);
 
 module.exports = router;

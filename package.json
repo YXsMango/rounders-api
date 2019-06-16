@@ -1,0 +1,41 @@
+{
+  "name": "rounders-rest-service",
+  "version": "0.0.1",
+  "description": "This is a RESTFul service for Rounders.io, a community focused news platform.",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:init": "node ./app/tasks/initdb.js",
+    "db:seed": "node ./app/tasks/seeddb.js",
+    "dev": "DEBUG=rounders-rest-service:* nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bwdmonkey/rounders-rest-service.git"
+  },
+  "keywords": [
+    "community"
+  ],
+  "author": "Manan Mehta",
+  "bugs": {
+    "url": "https://github.com/bwdmonkey/rounders-rest-service/issues"
+  },
+  "homepage": "https://github.com/bwdmonkey/rounders-rest-service#readme",
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "ccxt": "^1.13.50",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^5.0.1",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "morgan": "~1.9.0",
+    "pg-promise": "~8.7.2",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.0",
+    "nodemon": "^1.15.0"
+  }
+}

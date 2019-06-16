@@ -1,0 +1,5 @@
+apps:
+  - script   : ./bin/www
+    name: 'rounders-rest-service'
+    instances: 1
+    exec_mode: cluster

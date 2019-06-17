@@ -5,10 +5,12 @@
   "main": "app.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "db:init": "node ./app/tasks/initdb.js",
     "db:seed": "node ./app/tasks/seeddb.js",
-    "dev": "DEBUG=rounders-rest-service:* nodemon ./bin/www"
+    "dev": "DEBUG=rounders-rest-service:* nodemon ./bin/www",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

@@ -3,7 +3,7 @@ module.exports = {
   "rules": {
     "indent": [
       "error",
-      2
+      4
     ],
     "semi": [
       "error",
@@ -12,14 +12,18 @@ module.exports = {
     "comma-dangle": [
       "error",
       "never"
-    ]
+    ],
+    "no-console": "off",
+
   },
   "globals" : {
     "process": false,
     "require": false,
     "console": false,
     "Buffer": false,
-    "Promise": false
+    "Promise": false,
+    "module": false,
+    "__dirname": false
   },
   "parserOptions": {
     "ecmaVersion": 2018

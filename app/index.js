@@ -44,7 +44,7 @@ function configureCORS() {
         res.header('Access-Control-Max-Age', '600');
         if (req.method === 'OPTIONS') return res.sendStatus(200);
         else return next();
-    })
+    });
 }
 
 function configureRouters() {
@@ -59,7 +59,7 @@ function configureErrorHandlers() {
         next(err);
     });
 
-    app.use(function(err, req, res, next) {
+    app.use(function(err, req, res) {
         res.locals.message = err.message;
         res.locals.error = req.app.get('env') === 'development' ? err : {};
 
@@ -82,8 +82,8 @@ async function connectToDB() {
 
 connectToDB()
     .then(configure)
-    .catch(err => {
-        process.exit(2)
+    .catch(() => {
+        process.exit(2);
     });
 
 module.exports = app;
